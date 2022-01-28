@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 href="https://github.com/POWRFULCOW89"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Link to Diego Melo's GitHub"
               >
                 <i className="fab fa-github"></i>
               </a>
@@ -38,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 href="https://mx.linkedin.com/in/diego-melo-mx"
                 rel="noreferrer"
                 target="_blank"
+                aria-label="Link to Diego Melo's LinkedIn"
               >
                 <i className="fab fa-linkedin-in"></i>
               </a>

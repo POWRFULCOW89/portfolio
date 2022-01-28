@@ -53,10 +53,11 @@
 
   transition: top 0.7 ease;
 
-  h3 {
+  .projectTitle {
     margin: 0;
     font-size: 1.5rem;
     text-align: center;
+    font-weight: bold;
   }
 
   p {
@@ -92,6 +93,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .projectTitle {
+      font-weight: bold;
+    }
   }
 
   .project {

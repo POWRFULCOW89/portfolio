@@ -21,10 +21,13 @@ const Portfolio = (props: PortfolioProps) => {
     return projects.map((project) => (
       <div className={styles.project} key={`project-${project.name}`}>
         <div className={styles.projectDetailsMobile}>
-          <h3>{project.name}</h3>
+          <p className={styles.projectTitle}>{project.name}</p>
           <p>{project.language}</p>
         </div>
-        <Link href={`/portfolio/${project.name}`}>
+        <Link
+          href={`/portfolio/${project.name}`}
+          aria-label={`Link to the full project site of ${project.name}`}
+        >
           <a>
             <Image
               className={styles.projectImage}
@@ -39,7 +42,7 @@ const Portfolio = (props: PortfolioProps) => {
           </a>
         </Link>
         <div className={styles.projectDetails}>
-          <h3>{project.name}</h3>
+          <p className={styles.projectTitle}>{project.name}</p>
           <p>{project.language}</p>
           <Link href={`/portfolio/${project.name}`}>Learn more</Link>
         </div>
