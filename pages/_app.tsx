@@ -25,13 +25,18 @@ function MyApp({ Component, pageProps }: AppProps) {
         <footer>
           <ul className="social-links">
             <li className="social-button">
-              <a href="https://github.com/POWRFULCOW89" target="_blank">
+              <a
+                href="https://github.com/POWRFULCOW89"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i className="fab fa-github"></i>
               </a>
             </li>
             <li className="social-button">
               <a
                 href="https://mx.linkedin.com/in/diego-melo-mx"
+                rel="noreferrer"
                 target="_blank"
               >
                 <i className="fab fa-linkedin-in"></i>

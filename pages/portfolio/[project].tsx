@@ -205,7 +205,6 @@ const ProjectPage = ({ project, readme }: PageProps) => {
       <Head>
         <title>{`${name} - Diego Melo's Portfolio`}</title>
         <meta name="description" content="Some of my portfolio projects" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
       <main className={styles.mainContainer}>
@@ -219,13 +218,14 @@ const ProjectPage = ({ project, readme }: PageProps) => {
             width={width}
             height={height}
             priority
+            alt={`Preview of the ${name} project`}
           />
           <div className={styles.projectIntroContainer}>
             <div className={styles.projectIntro}>
               {renderProjectType(oldTopics)}
               <ReactMarkdown>{fullDescription}</ReactMarkdown>
               {homepage && (
-                <a href={homepage} target="_blank">
+                <a href={homepage} target="_blank" rel="noreferrer">
                   Live link here! <i className="fas fa-link"></i>
                 </a>
               )}
@@ -265,28 +265,22 @@ const octokit = new Octokit({
 });
 
 export async function getStaticPaths() {
-  // let res = await octokit.request("GET /users/POWRFULCOW89/repos", {
-  //   per_page: 100,
-  // });
-
-  // let res = await octokit.paginate(
-  //   octokit.repos.listForAuthenticatedUser,
+  // let res = await fetch(
+  //   "https://api.github.com/users/POWRFULCOW89/repos?per_page=100",
   //   {
-  //     per_page: 100,
-  //   },
-  //   (response) => response.data.filter((r) => !r.archived)
+  //     headers: {
+  //       Authorization: `Basic ${process.env.GITHUB_TOKEN}`,
+  //     },
+  //   }
   // );
 
-  let res = await fetch(
-    "https://api.github.com/users/POWRFULCOW89/repos?per_page=100",
+  // let projects = await res.json();
+  const { data: projects } = await octokit.request(
+    `GET /users/POWRFULCOW89/repos?per_page_100`,
     {
-      headers: {
-        Authorization: `Basic ${process.env.GITHUB_TOKEN}`,
-      },
+      per_page: 100,
     }
   );
-
-  let projects = await res.json();
 
   const paths = projects.map((project: Project) => ({
     params: { project: project.name },

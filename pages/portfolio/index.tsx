@@ -4,8 +4,6 @@ import Image from "next/image";
 import styles from "../../styles/Portfolio.module.scss";
 import { GetStaticProps } from "next";
 
-// import projects from "./projects";
-
 interface PortfolioProps {
   projects: any[];
 }
@@ -36,6 +34,7 @@ const Portfolio = (props: PortfolioProps) => {
               width={width}
               height={height}
               priority
+              alt={`Preview of the ${project.name} project`}
             />
           </a>
         </Link>
@@ -51,9 +50,8 @@ const Portfolio = (props: PortfolioProps) => {
   return (
     <>
       <Head>
-        <title>Diego Melo's Portfolio</title>
+        <title>Diego Melo&apos;s Portfolio</title>
         <meta name="description" content="Some of my portfolio projects" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
       <main className={styles.mainContainer}>

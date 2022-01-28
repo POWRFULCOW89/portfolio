@@ -42,6 +42,7 @@ const renderSkills = () => {
             width="100"
             height="100"
             priority
+            alt={skill}
           />
         ))}
       </div>
@@ -53,14 +54,20 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Diego Melo's Portfolio</title>
+        <title>Diego Melo&apos;s Portfolio</title>
         <meta name="description" content="Diego Melo's Portfolio site." />
       </Head>
 
       <main className={styles.mainContainer}>
         <h1>DIEGO MELO</h1>
         <div className={styles.mainWrapper}>
-          <Image src="/coder2.png" width="300" height="300" priority />
+          <Image
+            src="/coder2.png"
+            width="300"
+            height="300"
+            priority
+            alt="Portrait of Diego Melo"
+          />
           <div className={styles.mainIntro}>
             <h2 className="caret-underscore">
               Full Stack Developer<span>&nbsp;</span>
@@ -73,7 +80,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className={styles.ctaContainer}>
-          <Link href="/contact">Let's talk!</Link>
+          <Link href="/contact">Let&apos;s talk!</Link>
           <Link href="/portfolio">Explore my work </Link>
         </div>
         <section className={styles.skillsContainer}>

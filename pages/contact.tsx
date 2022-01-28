@@ -32,7 +32,7 @@ const Contact: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Diego Melo's Portfolio - Contact</title>
+        <title>Diego Melo&apos;s Portfolio - Contact</title>
         <meta
           name="description"
           content="Get in touch and let's get down to business!"
@@ -95,7 +95,7 @@ const Contact: NextPage = () => {
 
           <button type="submit">
             {loading ? (
-              <i className={`${styles.spinner} fas fa-spinner`} style={{}}></i>
+              <i className={`${styles.spinner} fas fa-spinner`}></i>
             ) : (
               "Submit"
             )}
