@@ -17,7 +17,7 @@ interface PageProps {
 const filterArray = (arr: string[], filtered: string[]) => {
   return arr.filter((str) => {
     for (const title of filtered) {
-      if (str.includes(title.replaceAll(" ", ""))) return false;
+      if (str.includes(title)) return false;
       return true;
     }
   });
