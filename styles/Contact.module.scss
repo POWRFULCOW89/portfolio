@@ -1,0 +1,97 @@
+@import "./variables.scss";
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin-top: 2em;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 1em;
+
+  > * {
+    font-family: Quicksand, sans-serif;
+    font-weight: bold;
+  }
+
+  label {
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+
+    // margin-top: 1em;
+    font-size: 1.5rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1.25rem;
+    padding: 0.5em 1em;
+    width: 20em;
+  }
+
+  button {
+    align-self: center;
+    margin-top: 2em;
+
+    color: white;
+    background-color: $primary;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    font-size: 1.25rem;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  textarea {
+    // height: min-content;
+    // resize: vertical;
+    min-height: 500px;
+    // overflow: auto;
+    resize: vertical;
+  }
+}
+
+.success,
+.error {
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  margin-top: 2em;
+}
+
+.success {
+  background-color: lightgreen;
+  color: green;
+}
+
+.error {
+  background-color: lightcoral;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.spinner {
+  animation: spin 1.5s linear infinite;
+}
