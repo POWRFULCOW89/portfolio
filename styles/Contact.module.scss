@@ -36,7 +36,7 @@
   textarea {
     font-size: 1.25rem;
     padding: 0.5em 1em;
-    width: 20rem;
+    width: 20em;
   }
 
   button {
@@ -94,4 +94,17 @@
 
 .spinner {
   animation: spin 1.5s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .form {
+    input,
+    textarea {
+      font-size: 1.25rem;
+      padding: 0.5em 1em;
+      width: 20rem;
+    }
+
+    margin-bottom: 5em;
+  }
 }

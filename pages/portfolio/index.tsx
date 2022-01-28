@@ -15,7 +15,8 @@ const Portfolio = (props: PortfolioProps) => {
   const renderProjects = () => {
     const projects = props.projects;
 
-    let width = 330;
+    // let width = 330;
+    let width = 400;
     let height = (width * 9) / 16;
 
     return projects.map((project) => (
@@ -31,7 +32,6 @@ const Portfolio = (props: PortfolioProps) => {
           <a>
             <Image
               className={styles.projectImage}
-              // src="/robalo.png"
               src={`/projects/${project.name}.png`}
               key={`project-${project.name}`}
               width={width}
