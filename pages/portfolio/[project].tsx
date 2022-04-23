@@ -162,7 +162,7 @@ const renderProjectType = (topics: string[]) => {
 
   return (
     <div className={styles.projectType}>
-      <i className={`fas fa-${projectType.icon}`}></i>
+      <i className={`fas fa-${projectType.icon} ${styles.projectTypeIcon}`}></i>
       <p>&nbsp;{projectType.type}</p>
     </div>
   );
